@@ -1,0 +1,139 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+
+/* ----- Fuente ----- */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+/* ----- Variables ----- */
+:root{
+    /* ### Colores */
+--White: hsl(0, 0%, 100%);
+--Light-pink: hsl(275, 100%, 97%);
+--Grayish-purple: hsl(292, 16%, 49%);
+--Dark-purple: hsl(292, 42%, 14%);
+--purple: purple;
+/* ### Tipografia
+- Font size (paragraphs): 16px
+
+- Family: [Work Sans](https://fonts.google.com/specimen/Work+Sans)
+- Weights: 400, 600, 700 */
+}
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+    background-color: var(--Light-pink);
+    background-image: url(../images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Work Sans',sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.container{
+    background-color: var(--White);
+    max-width: 650px;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+img, svg{
+    max-width: 100%;
+    display: block;
+
+}
+
+button{
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 0;
+    transition: all ease-in-out .5s;
+    
+}
+
+button:hover{
+    color: var(--purple);
+    font-weight: 700;
+    
+}
+
+.faq{
+    display: flex;
+    gap: 2rem;
+}
+
+.faq h1{
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--Dark-purple);
+}
+
+/* .accordion, .accordion_item:not(:last-child){
+    border-bottom: 2px solid var(--Light-pink);
+} */
+
+hr{
+    border-bottom: 2px solid var(--Light-pink);
+    opacity: .3;
+}
+
+.accordion_item .icons img{
+    min-width: 30px;
+}
+
+.accordion_item .icons .minus-icon{
+    display: none;
+}
+
+.accordion_description{
+    background-color: var(--White);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 200ms ease;
+    
+}   
+
+.accordion_description p{
+    color: var(--Grayish-purple);
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: -10px;
+}
+
+
+
+@media (max-width:540px){
+    body{
+        background-image: url(../images/background-pattern-mobile.svg);
+
+    }
+
+    .accordion_description p{
+        
+        font-size: .9rem;
+    }
+
+    
+}
